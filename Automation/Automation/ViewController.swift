@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var status: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func handleLoginTap(_ sender: Any) {
+        if username.text == "hello" && password.text == "world" {
+            status.text = "Success"
+        } else {
+            status.text = "Failed"
+        }
+    }
+    
 }
 
