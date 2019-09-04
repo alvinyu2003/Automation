@@ -15,7 +15,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var status: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        status.accessibilityIdentifier = "status"
     }
 
     @IBAction func handleLoginTap(_ sender: Any) {
