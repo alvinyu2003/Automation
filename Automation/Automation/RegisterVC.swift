@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  RegisterVC.swift
 //  Automation
 //
-//  Created by Alvin Yu on 8/25/19.
+//  Created by Alvin Yu on 9/6/19.
 //  Copyright © 2019 Alvin Yu. All rights reserved.
 //
 
 import UIKit
 
-class LoginVC: UIViewController {
+class RegisterVC: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -16,11 +16,15 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        status.accessibilityIdentifier = "status"
+        status.accessibilityIdentifier = "registerStatus"
     }
-
-    @IBAction func handleLoginTap(_ sender: Any) {
-        if username.text == "hello" && password.text == "world" {
+    
+    @IBAction func handleDoneTap(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true)
+    }
+    
+    @IBAction func handleRegisterTap(_ sender: Any) {
+        if username.text == "new" && password.text == "user" {
             status.text = "Success"
         } else {
             status.text = "Failed"
@@ -28,4 +32,3 @@ class LoginVC: UIViewController {
     }
     
 }
-
