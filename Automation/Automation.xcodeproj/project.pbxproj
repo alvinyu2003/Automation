@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7D836672325A4D00086BDA3 /* RegisterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D836662325A4D00086BDA3 /* RegisterTest.swift */; };
 		D422ADDF231F7C6E0037B0EF /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D422ADDE231F7C6E0037B0EF /* LoginTests.swift */; };
 		D4B010062313584A00F079BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B010052313584A00F079BF /* AppDelegate.swift */; };
 		D4B010082313584A00F079BF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B010072313584A00F079BF /* LoginVC.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7D836662325A4D00086BDA3 /* RegisterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTest.swift; sourceTree = "<group>"; };
 		D422ADDE231F7C6E0037B0EF /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		D4B010022313584A00F079BF /* Automation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B010052313584A00F079BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D422ADDE231F7C6E0037B0EF /* LoginTests.swift */,
+				A7D836662325A4D00086BDA3 /* RegisterTest.swift */,
 				D4B010272313584C00F079BF /* Info.plist */,
 			);
 			path = AutomationUITests;
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D836672325A4D00086BDA3 /* RegisterTest.swift in Sources */,
 				D422ADDF231F7C6E0037B0EF /* LoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
