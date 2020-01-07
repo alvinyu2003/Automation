@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, LoggedInRouter {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -30,6 +30,9 @@ class RegisterVC: UIViewController {
     @IBAction func handleRegisterTap(_ sender: Any) {
         if username.text == "new" && password.text == "user" {
             status.text = "Success"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                self?.transitionToMainUI()
+            }
         } else {
             status.text = "Failed"
         }

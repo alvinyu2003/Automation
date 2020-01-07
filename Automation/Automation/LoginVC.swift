@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, LoggedInRouter {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -22,10 +22,13 @@ class LoginVC: UIViewController {
     @IBAction func handleLoginTap(_ sender: Any) {
         if username.text == "hello" && password.text == "world" {
             status.text = "Success"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                self?.transitionToMainUI()
+            }
         } else {
             status.text = "Failed"
         }
     }
-    
+        
 }
 
