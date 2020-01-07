@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TwD-2X-fdt">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TwD-2X-fdt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,16 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ZV-AH-IMd">
-                                <rect key="frame" x="67" y="298" width="280" height="30"/>
+                                <rect key="frame" x="67" y="302" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="H2q-SN-MQS"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyQ-hi-09h">
-                                <rect key="frame" x="72" y="388" width="270" height="30"/>
+                                <rect key="frame" x="72" y="396" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FBk-qc-O7M"/>
                                     <constraint firstAttribute="width" constant="270" id="VuT-LP-DhQ"/>
@@ -39,7 +36,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H11-vi-t7f">
-                                <rect key="frame" x="157" y="478" width="100" height="21"/>
+                                <rect key="frame" x="157" y="486" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="EG4-mC-gyi"/>
                                 </constraints>
@@ -48,11 +45,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mh-RQ-I4U">
-                                <rect key="frame" x="67" y="208" width="280" height="30"/>
+                                <rect key="frame" x="67" y="208" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="99d-b5-jlM"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
@@ -92,31 +88,29 @@
             <objects>
                 <viewController id="ROX-j1-akC" customClass="RegisterVC" customModule="Automation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KdQ-TG-WJC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1t-EW-U0D">
-                                <rect key="frame" x="67" y="185" width="280" height="30"/>
+                                <rect key="frame" x="67" y="153" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="G8X-Ya-cZU"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="fAi-BC-hkc"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dA9-7o-jop">
-                                <rect key="frame" x="67" y="260" width="280" height="30"/>
+                                <rect key="frame" x="67" y="232" width="280" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="0ck-rm-r2e"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="eLN-nB-4yQ"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voZ-9y-SIu">
-                                <rect key="frame" x="72" y="339" width="270" height="30"/>
+                                <rect key="frame" x="72" y="315" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EFY-E2-GmJ"/>
                                     <constraint firstAttribute="width" constant="270" id="KcJ-zQ-2K5"/>
@@ -129,7 +123,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-Xs-deb">
-                                <rect key="frame" x="157" y="437" width="100" height="20.5"/>
+                                <rect key="frame" x="157" y="413" width="100" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bK1-cZ-onz"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jHQ-Rb-tiB"/>
@@ -160,6 +154,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="button" destination="voZ-9y-SIu" id="BsE-xY-K9r"/>
                         <outlet property="password" destination="dA9-7o-jop" id="CWI-nQ-M6H"/>
                         <outlet property="status" destination="Hde-Xs-deb" id="fDV-7R-plq"/>
                         <outlet property="username" destination="J1t-EW-U0D" id="5qs-Mh-Mmf"/>
@@ -193,7 +188,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UBV-Mg-NAJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wqu-w3-3zf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

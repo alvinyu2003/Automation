@@ -30,13 +30,13 @@ class RegisterTest: XCTestCase {
         
         let app = XCUIApplication()
         app.navigationBars["Automation.LoginVC"].buttons["Register"].tap()
-        let username = app.textFields["username"]
+        let username = app.textFields["registerUsername"]
         username.tap()
         username.typeText("username")
-        let password = app.secureTextFields["password"]
+        let password = app.secureTextFields["registerPassword"]
         password.tap()
         password.typeText("badpw")
-        let register = app.buttons["Register"]
+        let register = app.buttons["registerButton"]
         register.tap()
         let status = app.staticTexts["registerStatus"]
         XCTAssertEqual("Failed", status.label)

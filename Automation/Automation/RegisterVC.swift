@@ -12,11 +12,15 @@ class RegisterVC: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var status: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         status.accessibilityIdentifier = "registerStatus"
+        username.accessibilityIdentifier = "registerUsername"
+        password.accessibilityIdentifier = "registerPassword"
+        button.accessibilityIdentifier = "registerButton"
     }
     
     @IBAction func handleDoneTap(_ sender: Any) {
