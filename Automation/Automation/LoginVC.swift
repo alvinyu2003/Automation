@@ -12,21 +12,29 @@ class LoginVC: UIViewController, LoggedInRouter {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        status.accessibilityIdentifier = "status"
+        setUpAccessibilityIDs()
     }
 
+    private func setUpAccessibilityIDs() {
+        username.accessibilityIdentifier = acsID.Login.username
+        password.accessibilityIdentifier = acsID.Login.password
+        loginButton.accessibilityIdentifier = acsID.Login.login
+        registerButton.accessibilityIdentifier = acsID.Login.register
+    }
+    
     @IBAction func handleLoginTap(_ sender: Any) {
-        if username.text == "hello" && password.text == "world" {
-            status.text = "Success"
+        if username.text == "abc" && password.text == "123" {
+            // TODO: present error
+        } else {
+            // simulate network delay
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
                 self?.transitionToMainUI()
             }
-        } else {
-            status.text = "Failed"
         }
     }
         

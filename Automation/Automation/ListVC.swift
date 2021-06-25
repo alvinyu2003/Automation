@@ -16,8 +16,15 @@ class ListVC: UIViewController {
     
     var items = Array<Int>(1...42).map { Item(name: "Item: \($0)") }
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpAccessibilityIDs()
+    }
+    
+    private func setUpAccessibilityIDs() {
+        tableView.accessibilityIdentifier = acsID.List.list
     }
 
 }
@@ -25,13 +32,15 @@ class ListVC: UIViewController {
 extension ListVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let item = items[indexPath.row]
-        cell.textLabel?.text = item.name
+        if indexPath.row < items.count {
+            let item = items[indexPath.row]
+            cell.textLabel?.text = item.name
+        }
         return cell
     }
     

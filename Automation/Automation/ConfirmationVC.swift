@@ -21,7 +21,11 @@ class ConfirmationVC: UIViewController {
     }
     
     @IBAction func done(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        if let nvc = presentingViewController?.presentingViewController as? UINavigationController {
+            nvc.dismiss(animated: true) {
+                nvc.popToRootViewController(animated: true)
+            }
+        }
     }
 
 }

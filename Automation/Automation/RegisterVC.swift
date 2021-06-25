@@ -17,10 +17,13 @@ class RegisterVC: UIViewController, LoggedInRouter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        status.accessibilityIdentifier = "registerStatus"
-        username.accessibilityIdentifier = "registerUsername"
-        password.accessibilityIdentifier = "registerPassword"
-        button.accessibilityIdentifier = "registerButton"
+        setUpAccessibilityIDs()
+    }
+    
+    private func setUpAccessibilityIDs() {
+        username.accessibilityIdentifier = acsID.Register.username
+        password.accessibilityIdentifier = acsID.Register.password
+        button.accessibilityIdentifier = acsID.Register.register
     }
     
     @IBAction func handleDoneTap(_ sender: Any) {
@@ -28,13 +31,12 @@ class RegisterVC: UIViewController, LoggedInRouter {
     }
     
     @IBAction func handleRegisterTap(_ sender: Any) {
-        if username.text == "new" && password.text == "user" {
-            status.text = "Success"
+        if username.text == "abc" && password.text == "123" {
+            status.text = "Invalid"
+        } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
                 self?.transitionToMainUI()
             }
-        } else {
-            status.text = "Failed"
         }
     }
     
